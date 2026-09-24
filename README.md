@@ -1,8 +1,8 @@
 # Cyclistic Analysis
-Project comparing annual members and casual riders use of Cyclistic's bikes 
+Comparing bike usage of annual members and casual riders 
 
 # Business Task
-Analyse how annual members and casual riders use Cyclistic bikes differently to drive a marketing campaign encouraging casual riders to become annual members.  
+Analyse how annual members and casual riders use Cyclistic's bikes, informing marketing strategies aimed at converting casual riders into annual members.
 
 ## Stakeholders
 Lily Moreno, Director of Marketing
