@@ -15,3 +15,23 @@ Cyclistic marketing analytics team
 
 - This analysis uses the monthly data from 09/2025 to 08/2026.
 - This data was made available by Motivate International Inc. under [this license](https://divvybikes.com/data-license-agreement)
+
+## Data issues
+
+### Duplicate ride IDs: 35 rows sharing a 'ride_id'
+
+```sql
+SELECT
+  COUNT(*) AS total_rows,
+  COUNT(DISTINCT ride_id) AS distinct_ride_ids,
+  COUNT(*) - COUNT(DISTINCT ride_id) AS duplicate_rides
+FROM `bike-share-509605.cyclistic_data.all_trips`;
+```
+```sql
+SELECT
+  COUNT(*) AS total_rows,
+  (SELECT COUNT(*) FROM (SELECT DISTINCT * FROM `bike-share-509605.cyclistic_data.all_trips`)) AS distinct_rows,
+  COUNT(*) - (SELECT COUNT(*) FROM (SELECT DISTINCT * FROM `bike-share-509605.cyclistic_data.all_trips`)) AS rows_removed
+FROM `bike-share-509605.cyclistic_data.all_trips`;
+```
+This shows that all duplicate ride IDs arrive from genuine data duplicates
