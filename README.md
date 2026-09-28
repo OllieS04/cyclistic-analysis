@@ -11,4 +11,7 @@ Cyclistic executive team
 
 Cyclistic marketing analytics team
 
+# Data sources
 
+- This analysis uses the monthly data from 09/2025 to 08/2026.
+- This data was made available by Motivate International Inc. under [this license](https://divvybikes.com/data-license-agreement)
