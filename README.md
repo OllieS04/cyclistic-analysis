@@ -152,7 +152,7 @@ AND (LOWER(start_station_name) NOT LIKE '%test%' OR start_station_name IS NULL)
 AND (LOWER(end_station_name) NOT LIKE '%test%' OR end_station_name IS NULL)
 ```
 
-This creates a new table satisfying the conditions, whilst persevering the record of the original data. The new table contains 16 columns and 5951738 rows. The three new columns:
+This creates a new table satisfying the conditions, whilst preserving the record of the original data. The new table contains 16 columns and 5951738 rows. The three new columns:
 - **ride_length_min** displays the length of the trip in minutes to two decimal places
 - **day_of_week** and **month_name** display the day and month of the trips respectively, allowing for easier filtering in the analysis process.
 
@@ -161,7 +161,8 @@ Note that there were 4 cases where a 'test' station was named so these have been
 I ran the following queries to ensure the changes were successful:
 
 ```sql
-SELECT COUNT(*)
+SELECT
+  COUNT(*)
 FROM `bike-share-509605.cyclistic_data.all_trips_clean`
 WHERE LOWER(start_station_name) LIKE '%test%'
    OR LOWER(end_station_name) LIKE '%test%';
@@ -181,3 +182,4 @@ SELECT
   COUNT(*) - COUNT(DISTINCT ride_id) AS duplicate_rides
 FROM `bike-share-509605.cyclistic_data.all_trips_clean`
 ```
+The first two returned 0, and third confirmed 0 duplicate rows.
