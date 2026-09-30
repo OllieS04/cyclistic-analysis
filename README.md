@@ -131,3 +131,53 @@ There are 60 'start_station_id's that have 2 start station names. There are 58 '
 
 # Data cleaning
 
+## In order to clean the data: 
+- I removed all duplicate ride_id's and trips under 1 minute and above 24 hours. I assume that these trips arise from errors in the data or from false starts when using the bike service.
+- Null entries are to remain in the cleaned dataset as queries can still include these rows without reference to the stations.
+- Queries on this dataset will references stations through station_id instead of station names to avoid any spelling/naming issues.
+
+```sql
+CREATE OR REPLACE TABLE `bike-share-509605.cyclistic_data.all_trips_clean` AS
+SELECT
+  *,
+  ROUND(TIMESTAMP_DIFF(ended_at, started_at, SECOND) / 60, 2) AS ride_length_min,
+  FORMAT_TIMESTAMP('%A', started_at) AS day_of_week,
+  FORMAT_TIMESTAMP('%B', started_at) AS month_name
+FROM (
+  SELECT DISTINCT *
+  FROM `bike-share-509605.cyclistic_data.all_trips`
+)
+WHERE TIMESTAMP_DIFF(ended_at, started_at, SECOND) BETWEEN 60 AND 86400
+AND (LOWER(start_station_name) NOT LIKE '%test%' OR start_station_name IS NULL)
+AND (LOWER(end_station_name) NOT LIKE '%test%' OR end_station_name IS NULL)
+```
+
+This creates a new table satisfying the conditions, whilst persevering the record of the original data. The new table contains 16 columns and 5951738 rows. The three new columns:
+- **ride_length_min** displays the length of the trip in minutes to two decimal places
+- **day_of_week** and **month_name** display the day and month of the trips respectively, allowing for easier filtering in the analysis process.
+
+Note that there were 4 cases where a 'test' station was named so these have been removed through the final 'where' conditions.
+
+I ran the following queries to ensure the changes were successful:
+
+```sql
+SELECT COUNT(*)
+FROM `bike-share-509605.cyclistic_data.all_trips_clean`
+WHERE LOWER(start_station_name) LIKE '%test%'
+   OR LOWER(end_station_name) LIKE '%test%';
+```
+
+```sql
+SELECT 
+  COUNT(*)
+ FROM `bike-share-509605.cyclistic_data.all_trips_clean` 
+  WHERE ride_length_min < 1 OR ride_length_min > (60*24)
+```
+
+```sql
+SELECT
+  COUNT(*) AS total_rows,
+  COUNT(DISTINCT ride_id) AS distinct_ride_ids,
+  COUNT(*) - COUNT(DISTINCT ride_id) AS duplicate_rides
+FROM `bike-share-509605.cyclistic_data.all_trips_clean`
+```
