@@ -2,7 +2,7 @@
 Cyclistic is a fictional bike-share company in Chicago with casual riders and annual members. Casual riders consist of customers who purchase single-ride and full-day passes, whilst Cyclistic members are those who purchase an annual membership. Financial analysts have determined that annual memberships are the most profitable.
 
 ## Business Task
-Analyse how annual members and casual riders use Cyclistic's bikes, informing marketing strategies aimed at converting casual riders into annual members.
+How do annual members and casual riders use Cyclistic bike differently?
 
 ### Stakeholders
 Lily Moreno, Director of Marketing
@@ -183,3 +183,20 @@ SELECT
 FROM `bike-share-509605.cyclistic_data.all_trips_clean`
 ```
 The first two returned 0, and third confirmed 0 duplicate rows.
+
+# Analysis 
+To analyse the difference in bike usage between members and casual riders, I ran the following queries:
+
+```sql
+SELECT
+  member_casual,
+  ROUND(AVG(ride_length_min), 2) AS avg_ride_length,
+  COUNT(*) AS total_rides,
+  ROUND(COUNT(*) / SUM(COUNT(*)) OVER() * 100, 2) AS percentage_of_total
+FROM `bike-share-509605.cyclistic_data.all_trips_clean`
+GROUP BY member_casual;
+```
+
+<img width="638" height="798" alt="image" src="https://github.com/user-attachments/assets/a0a852cf-3f7b-462f-8de5-6a6e33be960b" />
+
+This query groups customers by member and casual riding types, returning the average ride length, total number of rides for each type, and the percentage of the total number of customers. Members have an average ride length of 12.21 minutes and account for 65/% (3870716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2081022)
