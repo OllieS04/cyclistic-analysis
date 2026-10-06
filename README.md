@@ -185,7 +185,10 @@ FROM `bike-share-509605.cyclistic_data.all_trips_clean`
 The first two returned 0, and third confirmed 0 duplicate rows.
 
 # Analysis 
-To analyse the difference in bike usage between members and casual riders, I ran the following queries:
+To analyse the difference in bike usage between members and casual riders, I used multiple queries and visualisations
+
+### 1. **Average ride length and share of rides per customer type**
+**Question:** How does the average ride length vary between casual riders and members?
 
 ```sql
 SELECT
@@ -196,7 +199,12 @@ SELECT
 FROM `bike-share-509605.cyclistic_data.all_trips_clean`
 GROUP BY member_casual;
 ```
+This query groups customers by member and casual riding types, returning the average ride length, total number of rides for each type, and the percentage of the total number of customers.
 
-<img width="638" height="798" alt="image" src="https://github.com/user-attachments/assets/a0a852cf-3f7b-462f-8de5-6a6e33be960b" />
+**Finding:** Members have an average ride length of 12.21 minutes and account for 65/% (3870716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2081022)
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/a0a852cf-3f7b-462f-8de5-6a6e33be960b" />
 
-This query groups customers by member and casual riding types, returning the average ride length, total number of rides for each type, and the percentage of the total number of customers. Members have an average ride length of 12.21 minutes and account for 65/% (3870716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2081022)
+**Finding:** Members have an average ride length of 12.21 minutes and account for 65/% (3870716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2081022)
+
+
+
