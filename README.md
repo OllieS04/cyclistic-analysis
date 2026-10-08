@@ -16,7 +16,7 @@ Cyclistic marketing analytics team
 - This analysis uses the monthly data from 09/2025 to 08/2026.
 - This data was made available by Motivate International Inc. under [this license](https://divvybikes.com/data-license-agreement). The records contain no personal information and the data is current.
 - The collated dataframe has 13 columns and 6115982 rows
-- Each row represents a single bike trip identified using it's corresponding ride_id. Each entry consists of the start location and time, and end location and time. There are two bike types, electric and classic, and two customer types, casual or member.
+- Each row represents a single bike trip identified using its corresponding ride_id. Each entry consists of the start location and time, and end location and time. There are two bike types, electric and classic, and two customer types, casual or member.
   
 
 ## Data observations
@@ -34,22 +34,21 @@ Cyclistic marketing analytics team
 ## In order to clean the data: 
 - Removed all duplicate ride_id's and trips under 1 minute and above 24 hours. I assume that these trips arise from errors in the data or from false starts when using the bike service.
 - Null entries are to remain in the cleaned dataset as queries can still include these rows without reference to the stations.
-- Queries on this dataset will references stations through station_id instead of station names to avoid any spelling/naming issues.
+- Queries on this dataset will reference stations through station_id instead of station names to avoid any spelling/naming issues.
 
-Created a new table satisfying the new conditions whilst preserving a record of the original data. The new table contains 16 columns and 5951738 rows. The three new columns:
+Created a new table satisfying the new conditions whilst preserving a record of the original data. The new table contains 16 columns and 5,951,738 rows. The three new columns:
 - **ride_length_min** displays the length of the trip in minutes to two decimal places
 - **day_of_week** and **month_name** display the day and month of the trips respectively, allowing for easier filtering in the analysis process.
 Note that there were 4 cases where a 'test' station was named so these have also been removed.
 
 
 # Analysis 
-To analyse the difference in bike usage between members and casual riders, I used a set of queries and visualisations
 
 ## 1. Average ride length and share of ride total per customer type
 
 ### **Question:** How does the average ride length vary by customer type? 
 
-**Findings:** Members have an average ride length of 12.21 minutes and account for 65% (3,870,716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2,081,022).
+**Findings:** Members have an average ride length of 12.21 minutes and account for 65% (3,870,716) of all rides, whereas casuals have an average ride length 18.41 minutes and account for 35% (2,081,022).
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/a0a852cf-3f7b-462f-8de5-6a6e33be960b" />
 
