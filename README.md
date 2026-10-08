@@ -49,13 +49,13 @@ To analyse the difference in bike usage between members and casual riders, I use
 
 ### **Question:** How does the average ride length vary by customer type? 
 
-**Findings:** Members have an average ride length of 12.21 minutes and account for 65/% (3870716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2081022)
+**Findings:** Members have an average ride length of 12.21 minutes and account for 65% (3,870,716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2,081,022).
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/a0a852cf-3f7b-462f-8de5-6a6e33be960b" />
 
 ## 2. Distribution of rides by day of the week and month of the year
 
-## **Question:** Which days of the week and months of the year account for the larger and smaller proportions for each customer type?
+### **Question:** Which days of the week and months of the year account for the larger and smaller proportions for each customer type?
 
 
 
