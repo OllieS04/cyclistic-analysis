@@ -36,7 +36,7 @@ Cyclistic marketing analytics team
 - Null entries are to remain in the cleaned dataset as queries can still include these rows without reference to the stations.
 - Queries on this dataset will references stations through station_id instead of station names to avoid any spelling/naming issues.
 
-This creates a new table satisfying the conditions, whilst preserving the record of the original data. The new table contains 16 columns and 5951738 rows. The three new columns:
+Created a new table satisfying the new conditions whilst preserving a record of the original data. The new table contains 16 columns and 5951738 rows. The three new columns:
 - **ride_length_min** displays the length of the trip in minutes to two decimal places
 - **day_of_week** and **month_name** display the day and month of the trips respectively, allowing for easier filtering in the analysis process.
 Note that there were 4 cases where a 'test' station was named so these have also been removed.
@@ -48,17 +48,6 @@ To analyse the difference in bike usage between members and casual riders, I use
 ## 1. Average ride length and share of ride total per customer type
 
 ### **Question:** How does the average ride length vary by customer type? 
-
-```sql
-SELECT
-  member_casual,
-  ROUND(AVG(ride_length_min), 2) AS avg_ride_length,
-  COUNT(*) AS total_rides,
-  ROUND(COUNT(*) / SUM(COUNT(*)) OVER() * 100, 2) AS percentage_of_total
-FROM `bike-share-509605.cyclistic_data.all_trips_clean`
-GROUP BY member_casual;
-```
-This query groups customers by member and casual riding types, returning the average ride length, total number of rides for each type, and the percentage of the total number of customers.
 
 **Findings:** Members have an average ride length of 12.21 minutes and account for 65/% (3870716) of all customers, whereas casuals have an average ride length 18.41 minutes and account for 35% (2081022)
 
