@@ -24,16 +24,26 @@ SELECT
 FROM `bike-share-509605.cyclistic_data.all_trips_clean`
 GROUP BY member_casual, month_name
 ORDER BY member_casual, month_name;
+
 -- distribution of usage by time of day
+WITH trips AS (
+  SELECT
+    member_casual,
+    CASE WHEN day_of_week IN ('Saturday', 'Sunday') THEN 'Weekend' ELSE 'Weekday' END AS day_type,
+    FLOOR(EXTRACT(HOUR FROM started_at) / 2) * 2 + 1 AS mid_interval,
+    started_at
+  FROM `bike-share-509605.cyclistic_data.all_trips_clean`
+)
 SELECT
   member_casual,
-  CASE WHEN day_of_week IN ('Saturday', 'Sunday') THEN 'Weekend' ELSE 'Weekday' END AS day_type,
-  FLOOR(EXTRACT(HOUR FROM started_at) / 2) * 2 + 1 AS midpoint,
+  day_type,
+  mid_interval,
   COUNT(*) AS total_rides,
-  COUNT(DISTINCT DATE(started_at)) AS num_days
-FROM `bike-share-509605.cyclistic_data.all_trips_clean`
-GROUP BY member_casual, day_type, midpoint
-ORDER BY member_casual, day_type, midpoint;
+  COUNT(DISTINCT DATE(started_at)) AS num_days,
+  ROUND(COUNT(*) * 100 / SUM(COUNT(*)) OVER (PARTITION BY member_casual, day_type), 2) AS pct_of_group
+FROM trips
+GROUP BY member_casual, day_type, mid_interval
+ORDER BY member_casual, day_type, mid_interval;
 
 -- rideable type usage per customer time
 SELECT 
