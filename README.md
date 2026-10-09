@@ -54,7 +54,19 @@ Note that there were 4 cases where a 'test' station was named so these have also
 
 ## 2. Distribution of rides by day of the week and month of the year
 
-### **Question:** Which days of the week and months of the year account for the larger and smaller proportions for each customer type?
+### **Question:** Which days of the week and months of the year are most and least popular respective of customer type.
+
+**Findings:** 
+- Casual rides increase significantly in the summer months
+- Casual rides increase significantly at weekends; Saturday accounts for over 20% of the weekly casual rides on average
+- Members rides are fairly uniformly distributed across the week
+
+<img width="640" height="801" alt="image" src="https://github.com/user-attachments/assets/ce95bb3e-66fb-4160-9151-8671166a7dc6" />
+
+**Inference:** 
+- Casual rides are likely more frequently for leisure purposes, being notably popular at weekends and in the summer, and lasting for an average of 6 minutes longer per journey
+- Existing members are likely commuters as bike usage varies less by day of the week and month of the year. The peaking in the summer would likely naturally arise as warmer weather encourages more people to cycle to work. 
+
 
 
 
