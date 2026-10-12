@@ -73,10 +73,24 @@ Note that there were 4 cases where a 'test' station was named so these have also
 
 **Findings:**
 - There is a significantly higher proportion of member riders then casual riders between 5am to 10am on weekdays
-- Outside of peak commute hours, casual rides become more popular respective to their total
+- Outside of peak commute hours, casual rides become more popular, respectively, on weekdays
 - There is no significant difference between the two customer types usage by time of day at weekends. There is a marginally higher peak for casual riders from 1pm to 5pm
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/451fbdc0-baa8-4504-be29-412c82ac07f3" />
+
+**Inference:** 
+- This data supports the previous inference, namely, members are likely using bikes for work commutes. It can also be infered that many casual riders also do, but more so for return trips from work back home.
+
+## 4. Most popular bike stations for each customer type
+
+### **Questions:** What information can be inferred from the most popular stations for each customer type?
+
+**Findings:**
+- Navy Pier appears as a start or end station significantly more times than any other station for casual riders (over 50,000 rides, the second most is 30,000)
+- The most popular locations for casual rides are large public spaces and venues
+- The most popular stations with member riders have less variation in quantity and are all 'street stations'
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/e6667ac4-cc16-4177-9a68-184686e410a4" />
 
 
 
