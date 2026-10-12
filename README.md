@@ -48,7 +48,7 @@ Note that there were 4 cases where a 'test' station was named so these have also
 
 ### **Question:** How does the average ride length vary by customer type? 
 
-**Findings:** Members have an average ride length of 12.21 minutes and account for 65% (3,870,716) of all rides, whereas casuals have an average ride length 18.41 minutes and account for 35% (2,081,022).
+**Findings:** Members have an average ride length of 12.21 minutes and account for 65% (3,870,716) of all rides, whereas casuals have an average ride length 18.41 minutes and account for 35% (2,081,022). For this analysis, I will focus on comparing the proportions of relative totals per customer type as working with percentages provides an easier medium for comparison when the totals for two the two types significantly different.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/a0a852cf-3f7b-462f-8de5-6a6e33be960b" />
 
@@ -61,12 +61,22 @@ Note that there were 4 cases where a 'test' station was named so these have also
 - Casual rides increase significantly at weekends; Saturday accounts for over 20% of the weekly casual rides on average
 - Members rides are fairly uniformly distributed across the week
 
-<img width="640" height="801" alt="image" src="https://github.com/user-attachments/assets/ce95bb3e-66fb-4160-9151-8671166a7dc6" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/ce95bb3e-66fb-4160-9151-8671166a7dc6" />
 
 **Inference:** 
 - Casual rides are likely more frequently for leisure purposes, being notably popular at weekends and in the summer, and lasting for an average of 6 minutes longer per journey
 - Existing members are likely commuters as bike usage varies less by day of the week and month of the year. The peaking in the summer would likely naturally arise as warmer weather encourages more people to cycle to work. 
 
+## 3. Distribution of rides by time of day
+
+### **Questions:** How do the most popular riding times vary between customer types on weekdays and at the weekend?
+
+**Findings:**
+- There is a significantly higher proportion of member riders then casual riders between 5am to 10am on weekdays
+- Outside of peak commute hours, casual rides become more popular respective to their total
+- There is no significant difference between the two customer types usage by time of day at weekends. There is a marginally higher peak for casual riders from 1pm to 5pm
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/451fbdc0-baa8-4504-be29-412c82ac07f3" />
 
 
 
