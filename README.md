@@ -81,16 +81,32 @@ Note that there were 4 cases where a 'test' station was named so these have also
 **Inference:** 
 - This data supports the previous inference, namely, members are likely using bikes for work commutes. It can also be infered that many casual riders also do, but more so for return trips from work back home.
 
-## 4. Most popular bike stations for each customer type
+## 4. Most popular bike stations and bike type for each customer type
 
-### **Questions:** What information can be inferred from the most popular stations for each customer type?
+### **Questions:** What information can be inferred from the most popular stations and bike type for each customer type?
 
 **Findings:**
 - Navy Pier appears as a start or end station significantly more times than any other station for casual riders (over 50,000 rides, the second most is 30,000)
 - The most popular locations for casual rides are large public spaces and venues
 - The most popular stations with member riders have less variation in quantity and are all 'street stations'
+- Electric bikes are significantly more popular than classic bikes within both groups 
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/e6667ac4-cc16-4177-9a68-184686e410a4" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/0f8aa8d1-c392-4b39-aa4d-ef5c610f27b2" />
+
+**Inference:** 
+- Further evidence to suggest many casual riders use bikes leisurely
+- A marketing campaign aimed at converting casual riders to members would be best advertised in and around public landmarks as these are the most visited stations for casual riders
+  
+# Summary and actionable recommednations
+## Summary
+
+From the analysis completed, I conclude the following as the most significant differences between casual riders and those with a membership:
+
+- Existing member primarily use the bikes for commutes to and from work. Casual riders use the bikes for more leisurely purposes
+- Summer time and weekends see a spike in ride quantity with casual riders
+- Casual riders frequently use bikes in and around large public landmarks
+
+## Actionable reccomendations
 
 
 
