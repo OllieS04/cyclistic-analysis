@@ -1,5 +1,5 @@
 # Cyclistic Analysis
-Cyclistic is a fictional bike-share company in Chicago with casual riders and annual members. Casual riders consist of customers who purchase single-ride and full-day passes, whilst Cyclistic members are those who purchase an annual membership. Financial analysts have determined that annual memberships are the most profitable.
+Cyclistic is a fictional bike-share company in Chicago with 5,800 bicycles and 600 docking stations. Customers are partitioned into two groups: casual riders and annual members. Casual riders consist of customers who purchase single-ride and full-day passes, whilst Cyclistic members are those who purchase an annual membership. Financial analysts have determined that annual memberships are the most profitable so the company is aiming to convert more casual riders into members.
 
 ## Business Task
 How do annual members and casual riders use Cyclistic bike differently?
@@ -17,6 +17,7 @@ Cyclistic marketing analytics team
 - This data was made available by Motivate International Inc. under [this license](https://divvybikes.com/data-license-agreement). The records contain no personal information and the data is current.
 - The collated dataframe has 13 columns and 6115982 rows
 - Each row represents a single bike trip identified using its corresponding ride_id. Each entry consists of the start location and time, and end location and time. There are two bike types, electric and classic, and two customer types, casual or member.
+- All SQL queries for data cleaning and analysis can be found in the 'sql' folder in this repository 
   
 
 ## Data observations
