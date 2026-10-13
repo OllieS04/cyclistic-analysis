@@ -89,7 +89,7 @@ Note that there were 4 cases where a 'test' station was named so these have also
 - Navy Pier appears as a start or end station significantly more times than any other station for casual riders (over 50,000 rides, the second most is 30,000)
 - The most popular locations for casual rides are large public spaces and venues
 - The most popular stations with member riders have less variation in quantity and are all 'street stations'
-- Electric bikes are significantly more popular than classic bikes within both groups 
+- Electric bikes are significantly more popular than classic bikes within both groups, and most popular for casual riders respectively
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/0f8aa8d1-c392-4b39-aa4d-ef5c610f27b2" />
 
@@ -106,8 +106,15 @@ From the analysis completed, I conclude the following as the most significant di
 - Summer time and weekends see a spike in ride quantity with casual riders
 - Casual riders frequently use bikes in and around large public landmarks
 
-## Actionable reccomendations
+## Actionable recommendations
 
+### 1) Advertise the campaign at the Navy Pier and other popular public landmarks
+Public landmark locations see the highest number of casual rides. The campaign could be initiated at Navy Pier, measured for effectiveness, then scaled to other locations appropriately.
 
+### 2) Run campaigns and memberships in summer and at weekends
+The data shows that casual rides increase significantly on Saturdays and in summer. Consider offering a summer and/or weekend use membership. Current casual riders may not need to use bikes as much on weekdays all year round, so a cheaper personalised membership would be appealing. 
+
+### 3) Include ride duration perks within the membership
+Offer credit bonuses or discounts for member rides over  a certain duration e.g. 15 minutes. The average ride time for casual riders is 18.4 minutes, above this threshold, so they will see a clear benefit by switching to memberships, whilst still protecting the profitability of the existing member base, subject to financial modelling.
 
 
