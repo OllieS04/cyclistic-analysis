@@ -48,7 +48,7 @@ Note that there were 4 cases where a 'test' station was named so these have also
 
 ### **Question:** How does the average ride length vary by customer type? 
 
-**Findings:** Members have an average ride length of 12.21 minutes and account for 65% (3,870,716) of all rides, whereas casuals have an average ride length 18.41 minutes and account for 35% (2,081,022). For this analysis, I will focus on comparing the proportions of relative totals per customer type as working with percentages provides an easier medium for comparison when the totals for two the two types significantly different.
+**Findings:** Members have an average ride length of 12.21 minutes and account for 65% (3,870,716) of all rides, whereas casuals have an average ride length 18.41 minutes and account for 35% (2,081,022). For this analysis, I will focus on comparing the proportions of relative totals per customer type as working with percentages provides an easier medium for comparison when the totals for the two types are significantly different.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/a0a852cf-3f7b-462f-8de5-6a6e33be960b" />
 
@@ -72,7 +72,7 @@ Note that there were 4 cases where a 'test' station was named so these have also
 ### **Questions:** How do the most popular riding times vary between customer types on weekdays and at the weekend?
 
 **Findings:**
-- There is a significantly higher proportion of member riders then casual riders between 5am to 10am on weekdays
+- Both members and casual rides peak around evening commutes on weekdays, but only members peak during morning commutes
 - Outside of peak commute hours, casual rides become more popular, respectively, on weekdays
 - There is no significant difference between the two customer types usage by time of day at weekends. There is a marginally higher peak for casual riders from 1pm to 5pm
 
@@ -89,7 +89,7 @@ Note that there were 4 cases where a 'test' station was named so these have also
 - Navy Pier appears as a start or end station significantly more times than any other station for casual riders (over 50,000 rides, the second most is 30,000)
 - The most popular locations for casual rides are large public spaces and venues
 - The most popular stations with member riders have less variation in quantity and are all 'street stations'
-- Electric bikes are significantly more popular than classic bikes within both groups, and most popular for casual riders respectively
+- Electric bikes are significantly more popular than classic bikes within both groups, accounting for 72.8% of all rides for casual riders
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/0f8aa8d1-c392-4b39-aa4d-ef5c610f27b2" />
 
@@ -97,14 +97,20 @@ Note that there were 4 cases where a 'test' station was named so these have also
 - Further evidence to suggest many casual riders use bikes leisurely
 - A marketing campaign aimed at converting casual riders to members would be best advertised in and around public landmarks as these are the most visited stations for casual riders
   
-# Summary and actionable recommednations
+# Summary and actionable recommendations
 ## Summary
 
 From the analysis completed, I conclude the following as the most significant differences between casual riders and those with a membership:
 
-- Existing member primarily use the bikes for commutes to and from work. Casual riders use the bikes for more leisurely purposes
+- Existing members likely primarily use the bikes for commutes to and from work. Casual riders likely use the bikes for more leisurely purposes
 - Summer time and weekends see a spike in ride quantity with casual riders
 - Casual riders frequently use bikes in and around large public landmarks
+
+## Data limitations
+- **No rider identifiers:** The data is represented through individual rides rather than riders, so it is not possible to tell if popular stations are the same riders using them very frequently, in which case less riders may be converted to memberships
+- **Time period:** The data used for this analysis spans a single year, so trends have not been compared to previous year to check patterns
+- **No pricing data:** For my recommendations, further financial analysis would be required to ensure profitability
+  
 
 ## Actionable recommendations
 
@@ -117,4 +123,15 @@ The data shows that casual rides increase significantly on Saturdays and in summ
 ### 3) Include ride duration perks within the membership
 Offer credit bonuses or discounts for member rides over  a certain duration e.g. 15 minutes. The average ride time for casual riders is 18.4 minutes, above this threshold, so they will see a clear benefit by switching to memberships, whilst still protecting the profitability of the existing member base, subject to financial modelling.
 
+## Next steps
+
+### 1) Compare the observed trends to previous years to check for a consistent pattern
+### 2) Add customer identifying data
+Support further analysis into whether casual rides at stations arise through an individual's repeated use or many unique customers
+### 3) Survey casual riders 
+Ask casual riders what benefits they would want from a membership or why they haven't purchased one yet
+### 4) Build a financial model for the third recommendation 
+Determine a best customer bonus/discount to increase member conversion whilst maintaining profitability
+### 5) Pilot the Navy Pier campaign and measure success
+Using survey results and recommendations, compare new membership purchases to other stations
 
